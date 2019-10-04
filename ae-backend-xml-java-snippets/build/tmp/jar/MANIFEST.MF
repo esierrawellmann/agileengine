@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Class-Path: jsoup-1.11.2.jar slf4j-log4j12-1.7.25.jar java-diff-utils-
+ 4.0.jar xmlunit-1.6.jar junit-4.12.jar xmlunit-core-2.2.1.jar slf4j-a
+ pi-1.7.25.jar log4j-1.2.17.jar org.eclipse.jgit-4.4.1.201607150455-r.
+ jar hamcrest-core-1.3.jar
+Main-Class: com.agileengine.MainClass
+

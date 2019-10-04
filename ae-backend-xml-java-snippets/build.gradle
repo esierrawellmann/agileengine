@@ -1,0 +1,33 @@
+group 'com.agileengine'
+version '0.0.1'
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.11.2'
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    compile "io.github.java-diff-utils:java-diff-utils:4.0"
+    compile group: 'xmlunit', name: 'xmlunit', version: '1.6'
+    compile 'junit:junit:4.12'
+
+    compile group: 'org.xmlunit', name: 'xmlunit-core', version: '2.2.1'
+
+}
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.agileengine.MainClass'
+        )
+    }
+    from { (configurations.runtime).collect { it.isDirectory() ? it : zipTree(it) } } {
+        exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
+    }
+
+}

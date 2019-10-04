@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.agileengine.MainClass
+Class-Path: Class-Path:ae-backend-xml-java-snippets.main
+
